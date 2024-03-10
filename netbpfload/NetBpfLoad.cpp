@@ -300,7 +300,6 @@ int main(int argc, char** argv, char * const envp[]) {
 
     if (isAtLeastV && !android::bpf::isAtLeastKernelVersion(4, 19, 0)) {
         ALOGE("Android V requires kernel 4.19.");
-        return 1;
     }
 
     if (isAtLeastV && android::bpf::isX86() && !android::bpf::isKernel64Bit()) {
